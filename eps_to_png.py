@@ -62,7 +62,7 @@ class Converter():
         draw_lines = ImageDraw.Draw(line_image)
     
         # Loop over all transformed coordinates and add them to the line image
-        for i in range(100, len(transformed_coordinates) - 100):  # Skip the first and last points
+        for i in range(1, len(transformed_coordinates) - 1):  # Skip the first and last points
             x, y = transformed_coordinates[i]
             # If there's a previous point, draw a green line from it to the current point
             if current_x is not None and current_y is not None:
